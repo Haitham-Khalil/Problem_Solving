@@ -1,0 +1,8 @@
+list1=[int(input(f"Element {i+1}: ")) for i in range(int(input("Enter the number of items in list 1: ")))]
+list2=[int(input(f"Element {i+1}: ")) for i in range(int(input("Enter the number of items in list 2: ")))]
+
+sorted_list1=sorted(list1)
+sorted_list2=sorted(list2)
+sorted_combined_list=sorted(sorted_list1+sorted_list2)
+
+print(sorted_combined_list)
