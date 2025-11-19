@@ -1,23 +1,40 @@
-target = int(input("Enter target value: "))
-numsLength=int(input("Enter the desired length for the List of the integers: "))
+# The Algorithm ( O(n^2)) :-
+# 1. let the user enter a target value
 
-print("Now fill in the list (the number of your inputs is equal to the desired length you just entered)")
-nums = [int(input()) for _ in range(numsLength)] # Creating a list of integers 
-arrPos=[] # Array of positions
+# 2. create a list of integers
+        # a. let the user enter the length of the list
+        # b. let the user assign elements to the list
 
+# 3. A need for a for loop that iterates len(list) times
 
-for i in range(len(nums)):
+# 4. A need for another for loop, since reverse checking is not needed, the loop variable (j) of the inner loop will always start (from the value of the first loop variable (i) +1)
+
+# 5. A conditional statement as a body inside the inner for loop is needed to check if the value of the element of i plus the element of j is equal to the target value. 
+    If found, break out of the inner for loop and then the outer for loop 
     
-    for j in range(i+1,len(nums)):
-        if(nums[i]+nums[j]==target):
-            arrPos.append(i)
-            arrPos.append(j)
-            break # breaking out of the inner for loop
-    break # breaking out of the outer for loop
-# Goal is to find the first pair of positions
+# 6. if there aren't any pair of positions, print no positions found, otherwise print the list 
+
+
+
+target=int(input("Please enter a target value: "))
+
+list=[int(input(f"Element {i+1}")) for i in range(int(input("Please enter the size: ")))]
+positions_found=False
+positions_list=[]
+
+for first_index in range(len(list)):
+    for second_index in range(first_index+1,len(list)):
+        if list[first_index]+list[second_index]==target:
+            positions_found=True
+            positions_list.append(first_index)
+            positions_list.append(second_index)
+            break
+    break
             
-for pos in arrPos:
-    print(pos)
+if not positions_found:
+    print("No positions found")
+else:
+    print("Positions:", positions_list)
             
         
     
