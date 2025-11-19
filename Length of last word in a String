@@ -1,0 +1,7 @@
+message=input("Enter what you wanna say")
+
+words=message.split()
+last_word=words[-1]
+length_last_word=len(words[-1])
+    
+print(length_last_word)
