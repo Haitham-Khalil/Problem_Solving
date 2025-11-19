@@ -1,0 +1,8 @@
+# Direct Palindrome checking doesn't exist for integers, it only exists for strings, so we convert our integer value to a string and then check if it's palindrome or not 
+
+num = int(input("Enter a number: "))
+
+if str(num) == str(num)[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
