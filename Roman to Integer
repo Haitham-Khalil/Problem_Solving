@@ -1,0 +1,19 @@
+roman_integer_mapping={
+    "I":"1",
+    "V":"5",
+    "X":"10",
+    "L":"50",
+    "C":"100",
+    "D":"500",
+    "M":"1000",
+    
+    }
+
+speech=input("Enter what you wanna say: ")
+
+words=speech.split()
+converted_speech=""
+for word in words:
+    converted_speech += roman_integer_mapping.get(word,word)+ " "
+
+print(converted_speech)
