@@ -1,0 +1,13 @@
+nums=[int(input(f"Element {i+1} :")) for i in range(int(input("Enter the size of the integer list: ")))]
+contains_duplicate=False
+for index in range(len(nums)):
+    for number in nums[index+1:]:
+         if(nums[index]== number):
+            contains_duplicate=True
+            break
+    
+if contains_duplicate:
+    print("Contains duplicate =>",nums)
+else:
+    print("No duplicates found")
+         
