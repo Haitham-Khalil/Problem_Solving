@@ -1,0 +1,13 @@
+n = int(input("Enter the number of strings: "))
+strs = [input(f"Enter string {i+1}: ") for i in range(n)]
+
+if(len(strs)!=0):
+    prefix = strs[0]
+else:
+    prefix=""
+
+for word in strs[1:]:
+    while prefix and not word.startswith(prefix):
+        prefix = prefix[:-1] # omit the last character
+
+print("Longest common prefix:", prefix)
