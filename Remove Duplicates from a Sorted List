@@ -1,0 +1,9 @@
+some_list=[int(input(f"Element {i+1}: ")) for i in range(int(input("Please enter the size of the list: ")))]
+some_list.sort()
+
+some_set=some_list # Eliminating duplicates from a list by just converting it to a set
+
+some_list=some_set # Converting it back to a list
+
+print(some_list)
+
