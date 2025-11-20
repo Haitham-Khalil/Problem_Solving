@@ -21,7 +21,6 @@ target=int(input("Please enter a target value: "))
 list=[int(input(f"Element {i+1}")) for i in range(int(input("Please enter the size: ")))]
 positions_found=False
 positions_list=[]
-
 for first_index in range(len(list)):
     for second_index in range(first_index+1,len(list)):
         if list[first_index]+list[second_index]==target:
