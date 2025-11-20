@@ -1,0 +1,6 @@
+def is_substring (needle,haysack):
+    return haysack.find(needle)
+
+needle=input("Enter a string: ")
+haysack=input("Enter a text: ")
+print(is_substring(needle,haysack))
