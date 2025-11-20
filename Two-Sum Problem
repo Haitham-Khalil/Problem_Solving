@@ -7,9 +7,9 @@
 
 # 3. A need for a for loop that iterates len(list) times
 
-# 4. A need for another for loop, since reverse checking is not needed, the loop variable (j) of the inner loop will always start (from the value of the first loop variable (i) +1)
+# 4. A need for another for loop, since reverse checking is not needed, the loop variable (second_index) of the inner loop will always start (from the value of the first loop variable (first_index) +1)
 
-# 5. A conditional statement as a body inside the inner for loop is needed to check if the value of the element of i plus the element of j is equal to the target value. 
+# 5. A conditional statement as a body inside the inner for loop is needed to check if the value of the element of first_index plus the element of second_index is equal to the target value. 
     If found, break out of the inner for loop and then the outer for loop 
     
 # 6. if there aren't any pair of positions, print no positions found, otherwise print the list 
