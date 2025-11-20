@@ -1,0 +1,17 @@
+prices = [int(input(f"Price {i+1}: ")) for i in range(int(input("Enter the number of days: ")))]
+
+maxprof=0
+buy_index=-1
+sell_index=-1
+
+for i,buy_price in enumerate(prices):
+    for j,sell_price in enumerate(prices[i+1:],start=i+1):
+        if sell_price-buy_price>maxprof:
+            buy_index=i
+            sell_index=j
+            maxprof=sell_price-buy_price
+
+if(len(prices)>1):
+    print(f"Maximum profit is {maxprof}, It is recommended to buy at day {buy_index+1} and sell at day {sell_index+1}")
+else:
+    print("Error")
