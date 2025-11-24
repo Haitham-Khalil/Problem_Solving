@@ -1,0 +1,148 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+double add(double a, double b)  // Add 2 Numbers
+{
+	return a+b;
+}
+
+double subtract(double a, double b)  // Subtract 2 Numbers
+{
+	return a-b;
+}
+
+double multiply(double a, double b)  // multiply 2 Numbers
+{
+	return a*b;
+}
+
+double divide(double a, double b)  // divide 2 Numbers
+{
+    if(b == 0)
+    {
+        cout<<"Error, Division by zero is not allowed"<<endl;
+        return -1;
+    }
+    
+	return a/b;
+}
+
+double square(double n) // The square of a Number
+{
+	return n*n;
+}
+
+double cube(double n) // The cube of a Number
+{
+	return n*n*n;
+}
+
+int factorial(int n)
+{
+    if(n<0)
+    {
+        cout<<"Error, negative numbers don't have a factorial"<<endl;
+        return -1;
+    }
+    if (n==0 || n==1)
+        return 1;
+        
+    int fact=1; // a variable to hold the factorial of a number 
+    
+    for(int i=2;i<=n;i++)
+        fact *= i;
+        
+    return fact;
+}
+
+bool isEven(int n)
+{
+   return n % 2 == 0;
+}
+
+bool isPrime(int n) {
+    if(n <= 1) return false;
+    
+    for(int i = 2; i * i <= n; i++)
+        if(n % i == 0) 
+        return false; // The entered number is divisible by a number that isn't 1 or the entered number itself.
+        
+    return true;
+}
+double average (double a , double b) // Average of 2 Numbers
+{
+    return (a+b)/2;
+}
+double maxNum(int a , int b) // Find Maximum Number
+{
+   return (a>b ? a : b);
+}
+
+double minNum(int a , int b) // Find Minimum Number
+{
+   return (a<b ? a : b);
+}
+
+int sumToN(int n) // The summation of numbers from 1 to n
+{
+    int sum=0;
+    
+    for(int i=0;i<=n;i++)
+    {
+        sum+=i;
+    }
+    
+    return sum;
+}
+
+
+double areaCircle(double r) {
+    const double PI = 3.14159;
+    return PI * r * r;
+}
+
+double areaTriangle(double b , double h) //The area of Triangle
+{
+    return (b*h) / 2;
+}
+
+double power(double a , int b) // A number raised to a number
+{
+    double val=1.0;
+    
+    for (int i=1;i<=b;i++)
+        val *= a;
+    
+    return val;
+}
+
+int modulus(int a , int b)
+{
+    if(b == 0)
+    {
+        cout<<"Error, Division by zero is not allowed, so modulus is undefined"<<endl;
+        return -1;
+    }
+    return a % b;
+}
+
+int gcd(int a, int b) 
+{
+    if (b == 0)
+        return a;       
+    return gcd(b, a % b);  
+}
+
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);  
+}
+
+double simpleInterest(double principal, double rate, double time) {
+    return (principal * rate * time) / 100.0;
+}
+int main()
+{
+    
+    return 0;
+}
