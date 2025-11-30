@@ -1,0 +1,24 @@
+void encryptArray(vector<int>& arr)
+{
+    for (int i = 0; i < arr.size(); i++)
+    {
+        int x = arr[i];
+        int encrypted = 0;
+
+        if (isEven(x))
+        {
+            double sq = square(x);
+            double c  = cube(2);
+            double s  = add(sq, c);
+            encrypted = modulus((int)s, 97);
+        }
+        else
+        {
+            double sq = square(x);
+            double s  = add(sq, 5);
+            encrypted = modulus((int)s, 113);
+        }
+
+        arr[i] = encrypted;
+    }
+}
